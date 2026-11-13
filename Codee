@@ -1,0 +1,67 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    string password;
+    int total;
+    double average;
+
+    // STUDENT LOGIN
+    cout << "********************************" << endl;
+    cout << "          STUDENT LOGIN" << endl;
+    cout << "********************************" << endl;
+
+    cout << "Enter Password: ";
+    cin >> password;
+
+    while (password != "carlocabelin2005") {
+        cout << "\nIncorrect Password!" << endl;
+        cout << "Please try again: ";
+        cin >> password;
+    }
+
+    cout << "\nLogin Successful!" << endl;
+
+    // STUDENT GRADE REPORT
+    cout << "\n********************************" << endl;
+    cout << "       STUDENT GRADE REPORT" << endl;
+    cout << "********************************" << endl;
+
+    cout << "Name: CABELIN, CARLO MAGALLANES" << endl;
+    cout << "Year and Section: BSIT 1A" << endl;
+
+    cout << "\n********************************" << endl;
+    cout << "          SUBJECT GRADES" << endl;
+    cout << "********************************" << endl;
+
+    int programming = 93;
+    int database = 99;
+    int networking = 89;
+    int operatingSystem = 90;
+    int nstp = 93;
+
+    cout << "Programming 1       " << programming << endl;
+    cout << "Database            " << database << endl;
+    cout << "Networking          " << networking << endl;
+    cout << "Operating System    " << operatingSystem << endl;
+    cout << "NSTP                " << nstp << endl;
+
+    total = programming + database + networking
+            + operatingSystem + nstp;
+
+    average = total / 5.0;
+
+    cout << "\n--------------------------------" << endl;
+    cout << "Total: " << total << endl;
+    cout << fixed << setprecision(2);
+    cout << "Average: " << average << endl;
+
+    if (average >= 75) {
+        cout << "Overall Remarks: PASSED" << endl;
+    } else {
+        cout << "Overall Remarks: FAILED" << endl;
+    }
+
+    return 0;
+}
